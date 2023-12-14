@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  type="text/css" href="formulario.css">
+    <title>Formulário TI</title>
+</head>
+<body>
+    <div>
+    <h1 id="titulo">Formulário de TI</h1>
+    <p id="subtitulo">Complete suas infomações pessoais:</p>
+    <br>
+</div>
+
+<form action="/submit" method="post">
+    <fieldset class="grupo">
+        <div class="campo">
+            <label  for="Nome"> Seu Nome Completo</label>
+            <input type="text" name="Nome" id="Nome" required>
+        </div>
+        <div class="campo">
+            <label for="Curso"> Seu Curso</label>
+            <input type="text" name="Curso" id="Curso" required>
+        </div>
+        <div class="campo">
+            <label for="Email">Email</label>
+            <input type="text" name="Email" id="Email" required>
+        </div>
+    </fieldset>
+    <br>
+
+    <div class="campo">
+        <label> Qual lado do desenvolvimento de sistemas você se interessa mais ?</label>
+
+        <br>
+
+        <label>
+            <input type="radio" name="devweb1" value="Front-End" >Front-End
+        </label>
+
+        <label>
+            <input type="radio" name="devweb2" value="Back-End">Back-End
+        </label>
+
+        <label>
+            <input type="radio" name="devweb3" value="Fullstack">Fullstack
+        </label>
+
+        <label> 
+            <input type="radio" name="devweb4" value="Área de Dados">Área de Dados
+        </label>
+ 
+    </div>
+
+    <div class="campo">
+        <label> Quais Tecnologias gosta mais de usar ?</label>
+        <br>
+        <label>
+            <input type="radio" name="tec1" value="HTML">HTML
+        </label>
+        <label>
+            <input type="radio" name="tec2" value="CSS">CSS
+        </label>
+        <label>
+            <input type="radio" name="tec3" value="Python">Python
+        </label>
+        <label>
+            <input type="radio" name="tec4" value="Java">Java
+        </label>
+        <label>
+            <input type="radio" name="tec5" value="PHP">PHP
+        </label>
+        <label>
+            <input type="radio" name="tec6" value="C">C
+        </label>
+        <label>
+            <input type="radio" name="tec7" value="C++">C++
+        </label>
+        <label>
+            <input type="radio" name="tec8" value="C#">C#
+        </label>
+        <label>
+            <input type="radio" name="tec9" value="JavaScript">JavaScript
+        </label>
+        <label>
+            <input type="radio" name="tec10" value="TypeScript">TypeScript
+        </label>
+    </div>
+
+    <br>
+
+    <div class="campo">
+        <label for="Semestre"> Qual semestre está cursando atualmente ?</label>
+        <select name="Semestre" id="Semestre">
+            <option value="Selecione">Selecione</option>
+            <option value="Primeiro">Primeiro</option>
+            <option value="Segundo">Segundo</option>
+            <option value="Terceiro">Terceiro</option>
+            <option value="Quarto">Quarto</option>
+            <option value="Quinto">Quinto</option>
+            <option value="Sexto">Sexto</option>
+            <option value="Sétimo">Sétimo</option>
+            <option value="Oitavo">Oitavo</option>
+        </select>
+    </div>
+
+    <br> 
+
+    </fieldset>
+
+        <div class="campo">
+            <label> Conte-nos qual área da TI gostaria de trabalhar ?</label>
+            <textarea name="Área da TI" id="Área da TI" cols="70" rows="10"></textarea>
+        </div>
+
+        <br>
+        <button class="botao" type="submit">Enviar</button>
+
+
+</form>
+
+</body>
+</html>
