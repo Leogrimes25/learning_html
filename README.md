@@ -1,1 +1,1 @@
-Scripts HTML variados provenientes dos estudos e prátcias em desenvolvimento Web
+Scripts HTML variados provenientes dos estudos e práticas em Desenvolvimento Web.
