@@ -3,27 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="tabela.css">
+    <title>Projeto Moodle</title>
 </head>
 <body>
-    <h1> Objetivos de Aprendizagem</h1>
-    <h2> Semana 1</h2>
-    <table border="1">
+    <br>
+    <h1 class="h1">Objetivos de Aprendizagem Pós Aula</h1>
+    <br>
+    <h2 class="h2">Visualização dos Campos</h2>
+    <br>
+    <table class="tabela">
+        
         <tr>
-            <td>Nome Completo do Utilizador</td>
-            <td>Grupos</td>
-            <td>Email</td>
-            <td>Neste momento da disciplina, você já se sente capaz de encontrar o módulo de uma palavra?</td>
-            <td>Neste momento da disciplina, você se sente capaz de diferenciar palavra de alfabeto?</td>
-            <td>Neste momento da disciplina, você se sente capaz de identificar uma linguagem?</td>
-            <td>Neste momento da disciplina, você se sente capaz de aplicar os operadores apresentados em um alfabeto?</td>
-            <td></td>
+            <th>Nome Completo do Utilizador</th>
+            <th>Grupos</th>
+            <th>Email</th>
+            <th>Datas</th>
+            <th>Neste momento da disciplina, você já se sente capaz de encontrar o módulo de uma palavra?</th>
+            <th>Neste momento da disciplina, você se sente capaz de diferenciar palavra de alfabeto?</th>
+            <th>Neste momento da disciplina, você se sente capaz de identificar uma linguagem?</th>
+            <th>Neste momento da disciplina, você se sente capaz de aplicar os operadores apresentados em um alfabeto?</th>
         </tr>
-
-        <tr>
-        </tr>
-
-    </table>
     
+
+        {% for dado in dados %}
+            <tr>
+                <td>{{ dado.nome }}</td>
+                <td>{{ dado.grupos }}</td>
+                <td>{{ dado.email }}</td>
+                <td>{{ dado.datas }}</td>
+                <td>{{ dado.questao1 }}</td>
+                <td>{{ dado.questao2 }}</td>
+                <td>{{ dado.questao3 }}</td>
+                <td>{{ dado.questao4 }}</td>
+            </tr>
+        {% endfor %}
+
+        {% for dado in dados %}
+            <tr>
+                <td>{{ dado.nome }}</td>
+                <td>{{ dado.grupos }}</td>
+                <td>{{ dado.email }}</td>
+                <td>{{ dado.datas }}</td>
+                <td>{{ dado.questao1 }}</td>
+                <td>{{ dado.questao2 }}</td>
+                <td>{{ dado.questao3 }}</td>
+                <td>{{ dado.questao4 }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
 </body>
 </html>

@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+}
+
+h1{
+    text-align: right;
+    color: rgb(19, 13, 2);
+    font-size: 45px;
+   
+}
+
+h2{
+    text-align: left;
+}
+
+body{
+    margin: 0px;
+}
+
+
+.paragrafo{
+    text-align: center;
+}
+
+.navbar ul{
+    list-style-type: none;
+    background-color: rgb(17, 16, 16);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.navbar a{
+    color: rgb(238, 241, 243);
+    text-decoration: none;
+    padding: 12px;
+    display: inline-block;
+    text-align: center;
+    font-size: 35px;
+}
+
+.navbar a:hover{
+    background-color: rgb(110, 106, 106);
+}
+
+.navbar li{
+    float: left;
+}
+
+
+.dropdow_menu{
+    position: absolute;
+    display:none;
+}
+
+.dropdow_menu a{
+    color:black;
+    display: block;
+    border: 1px solid black;
+    
+
+}
+
+.dropdow:hover .dropdow_menu{
+    display: block;
+}
+
+main {
+    max-width: 500px; /* Ajuste conforme necessário */
+    padding: 10px;
+}
+
+.imagem {
+    max-width: 100%;
+    margin-left: 0;
+  
+}
+
+
+.footer{
+    text-align: center;
+    padding: 70px;
+}
+
+.footer a{
+    margin: 0 10px;
+    font-size: large;
+    color: rgb(117, 96, 211);
+}
+
+.footer i {
+    margin-bottom: 30px;
+}

@@ -21,7 +21,7 @@ fieldset{
 }
 
 body{
-    background-color: rgb(230, 164, 79);
+    background-color: rgb(179, 195, 231);
     font-family: sans-serif;
     font-size: 1.5em;
     margin-left: 7%;
@@ -41,7 +41,7 @@ input,select,button,textarea{
 .campo label{
     margin-bottom: 0.1em;
     display: block;
-    color: #59429d;
+    color: #8478a8;
 }
 
 fieldset.grupo{
