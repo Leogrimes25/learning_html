@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tabela.css">
+    <title>Projeto Moodle</title>
+</head>
+<body>
+    <br>
+    <h1 class="h1">Objetivos de Aprendizagem Pós Aula</h1>
+    <br>
+    <h2 class="h2">Visualização dos Campos</h2>
+    <br>
+    <table class="tabela">
+        
+        <tr>
+            <th>Nome Completo do Utilizador</th>
+            <th>Grupos</th>
+            <th>Email</th>
+            <th>Datas</th>
+            <th>Neste momento da disciplina, você já se sente capaz de descrever o que é a operação de concatenação?</th>
+            <th>Neste momento da disciplina, você já se sente capaz de descrever o que é a operação de união?</th>
+            <th>Neste momento da disciplina, você já se sente capaz de descrever o que é a operação de intersecção?</th>
+            <th>Neste momento da disciplina, você já se sente capaz de descrever o que é a operação de diferença?</th>
+            <th>Neste momento da disciplina, você já se sente capaz de descrever o que é a operação de complemento?</th>
+            <th>Neste momento da disciplina, você já se sente capaz de comparar a operação de complemento da lógica clássica com a de complemento de linguagens?</th>
+            <th>Neste momento da disciplina, você já se sente capaz de realizar alguma operação que você viu no conteúdo desta semana?</th>
+        </tr>
+    
+
+        {% for dado in dados %}
+            <tr>
+                <td>{{dado.nome}}</td>
+                <td>{{dado.grupos}}</td>
+                <td>{{dado.email}}</td>
+                <td>{{dado.datas}}</td>
+                <td>{{dado.questao1}}</td>
+                <td>{{dado.questao2}}</td>
+                <td>{{dado.questao3}}</td>
+                <td>{{dado.questao4}}</td>
+                <td>{{dado.questao5}}</td>
+                <td>{{dado.questao6}}</td>
+                <td>{{dado.questao7}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
