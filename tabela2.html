@@ -3,26 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="tabela.css">
+    <link rel="stylesheet" type="text/css" href="tabela.css">
     <title>Projeto Moodle</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+    $(document).ready(function () {
+        $('#filtro_2').change(function () {
+            var selectedOption = $(this).val();
+            if (selectedOption === 'Ascendente') {
+                window.location.href = '/ordenada_por_nome_asc_2';
+            } else if (selectedOption === 'Decrescente') {
+                window.location.href = '/ordenada_por_nome_desc_2';
+            }
+        });
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js">
+    $(document).ready(function () {
+        $('#seletorForm2').submit(function (event) {
+            event.preventDefault(); // Evita que o formulário seja enviado automaticamente
+
+            // Obtenha os valores selecionados
+            var campo1 = $('#select_linha_2').val();
+            var campo2 = $('#select_linha_2').val();
+
+            // Envie uma requisição GET para o servidor Flask
+            window.location.href = '/seletor_linha?campo1=' + campo1 + '&campo2=' + campo2;
+        });
+    });
+</script>
 </head>
 <body>
     <br>
     <h1 class="h1">Objetivos de Aprendizagem Pós Aula (Semana 2)</h1>
-    <br>
     <br>
     <h2 class="h2">Visualização dos Campos</h2>
     <br>
     <br>
     <nav class="navbar">
         <ul>
+            <li><a href="principal.html">Home</a></li>
             <li><a href="tabela.html">Semana 1</a></li>
             <li><a href="#"> Semana 3</a></li>
             <li><a href="#"> Semana 4</a></li>
         </ul>
     </nav>
     <table class="tabela">
-        
+
         <tr>
             <th>Nome Completo do Utilizador</th>
             <th>Grupos</th>
@@ -36,7 +63,7 @@
             <th>Neste momento da disciplina, você já se sente capaz de comparar a operação de complemento da lógica clássica com a de complemento de linguagens?</th>
             <th>Neste momento da disciplina, você já se sente capaz de realizar alguma operação que você viu no conteúdo desta semana?</th>
         </tr>
-    
+
 
         {% for dado in dados %}
             <tr>
@@ -54,6 +81,53 @@
             </tr>
         {% endfor %}
     </table>
+    <form id="ordenarForm2" action="" method="get">
+    <div class="select_container">
+        <select class="select_box" name="filtro_2" id="filtro_2">
+            <option value="Ordenar">Ordenar nomes em :</option>
+            <option value="Ascendente">Ascendente</option>
+            <option value="Decrescente">Decrescente</option>
+        </select>
+    </div>
+    </form>
+    <br>
+    <form id="seletorForm2" action="/seletor_linha_2" method="get">
+        <select class="select_linha_2" name="campo1" id="select_linha">
+            <option value="">Quero Combinar a linha :</option>
+            <option value="nome">Nome Completo do Utilizador</option>
+            <option value="grupos">Grupos</option>
+            <option value="email">Email</option>
+            <option value="datas">Datas</option>
+            <option value="questao1">Neste momento da disciplina, você já se sente capaz de descrever o que é a operação de concatenação?</option>
+            <option value="questao2">Neste momento da disciplina, você já se sente capaz de descrever o que é a operação de união?</option>
+            <option value="questao3">Neste momento da disciplina, você já se sente capaz de descrever o que é a operação de intersecção?</option>
+            <option value="questao4">Neste momento da disciplina, você já se sente capaz de descrever o que é a operação de diferença?</option>
+            <option value="questao5">Neste momento da disciplina, você já se sente capaz de descrever o que é a operação de complemento?</option>
+            <option value="questao6">Neste momento da disciplina, você já se sente capaz de comparar a operação de complemento da lógica clássica com a de complemento de linguagens?</option>
+            <option value="questao7">Neste momento da disciplina, você já se sente capaz de realizar alguma operação que você viu no conteúdo desta semana?</option>
+        </select>
+        <br>
+        <br>
+        <div>
+            <select class="select_linha_2" name="campo2" id="select_linha_2">
+            <option value="">Com a linha :</option>
+            <option value="nome">Nome Completo do Utilizador</option>
+            <option value="grupos">Grupos</option>
+            <option value="email">Email</option>
+            <option value="datas">Datas</option>
+            <option value="questao1">Neste momento da disciplina, você já se sente capaz de descrever o que é a operação de concatenação?</option>
+            <option value="questao2">Neste momento da disciplina, você já se sente capaz de descrever o que é a operação de união?</option>
+            <option value="questao3">Neste momento da disciplina, você já se sente capaz de descrever o que é a operação de intersecção?</option>
+            <option value="questao4">Neste momento da disciplina, você já se sente capaz de descrever o que é a operação de diferença?</option>
+            <option value="questao5">Neste momento da disciplina, você já se sente capaz de descrever o que é a operação de complemento?</option>
+            <option value="questao6">Neste momento da disciplina, você já se sente capaz de comparar a operação de complemento da lógica clássica com a de complemento de linguagens?</option>
+            <option value="questao7">Neste momento da disciplina, você já se sente capaz de realizar alguma operação que você viu no conteúdo desta semana?</option>
+            </select>
+        </div>
+        <br>
+        <br>
+        <button type="submit">Combinar</button>
+    </form>
 
 </body>
 </html>

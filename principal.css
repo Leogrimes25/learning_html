@@ -37,6 +37,7 @@ body{
     display: inline-block;
     text-align: center;
     font-size: 35px;
+    margin-right: 20px;
 }
 
 .navbar a:hover{
@@ -47,26 +48,8 @@ body{
     float: left;
 }
 
-
-.dropdow_menu{
-    position: absolute;
-    display:none;
-}
-
-.dropdow_menu a{
-    color:black;
-    display: block;
-    border: 1px solid black;
-    
-
-}
-
-.dropdow:hover .dropdow_menu{
-    display: block;
-}
-
 main {
-    max-width: 500px; /* Ajuste conforme necessário */
+    max-width: 500px; 
     padding: 10px;
 }
 

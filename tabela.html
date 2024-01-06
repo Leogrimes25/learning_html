@@ -43,21 +43,13 @@
     <br>
     <nav class="navbar">
         <ul>
+            <li> <a href="principal.html">Home</a></li>
             <li><a href="tabela2.html">Semana 2</a></li>
             <li><a href="#"> Semana 3</a></li>
             <li><a href="#"> Semana 4</a></li>
         </ul>
     </nav>
     <br>
-    <form id="ordenarForm" action="" method="get"></form>
-    <div class="select_container">
-        <select class="select_box" name="filtro" id="filtro">
-            <option value="Ordenar">Ordenar nomes em :</option>
-            <option value="Ascendente">Ascendente</option>
-            <option value="Decrescente">Decrescente</option>
-        </select>
-    </div>
-    </form>
     <table class="tabela">
         
         <tr>
@@ -98,6 +90,16 @@
             </tr>
         {% endfor %}
     </table>
+    <br>
+    <form id="ordenarForm" action="" method="get"></form>
+    <div class="select_container">
+        <select class="select_box" name="filtro" id="filtro">
+            <option value="Ordenar">Ordenar nomes em :</option>
+            <option value="Ascendente">Ascendente</option>
+            <option value="Decrescente">Decrescente</option>
+        </select>
+    </div>
+    </form>
     <br>
     <form id="seletorForm" action="/seletor_linha" method="get">
         <select class="select_linha" name="campo1" id="select_linha">
