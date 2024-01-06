@@ -4,6 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="tabela.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#filtro').change(function () {
+            var selectedOption = $(this).val();
+            if (selectedOption === 'Ascendente') {
+                window.location.href = '/ordenada_por_nome_asc';
+            } else if (selectedOption === 'Decrescente') {
+                window.location.href = '/ordenada_por_nome_desc';
+            }
+        });
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#seletorForm').submit(function (event) {
+            event.preventDefault(); // Evita que o formulário seja enviado automaticamente
+
+            // Obtenha os valores selecionados
+            var campo1 = $('#select_linha').val();
+            var campo2 = $('#select_linha_2').val();
+
+            // Envie uma requisição GET para o servidor Flask
+            window.location.href = '/seletor_linha?campo1=' + campo1 + '&campo2=' + campo2;
+        });
+    });
+</script>
     <title>Projeto Moodle</title>
 </head>
 <body>
@@ -13,7 +41,6 @@
     <br>
     <h2 class="h2">Visualização dos Campos</h2>
     <br>
-
     <nav class="navbar">
         <ul>
             <li><a href="tabela2.html">Semana 2</a></li>
@@ -21,6 +48,16 @@
             <li><a href="#"> Semana 4</a></li>
         </ul>
     </nav>
+    <br>
+    <form id="ordenarForm" action="" method="get"></form>
+    <div class="select_container">
+        <select class="select_box" name="filtro" id="filtro">
+            <option value="Ordenar">Ordenar nomes em :</option>
+            <option value="Ascendente">Ascendente</option>
+            <option value="Decrescente">Decrescente</option>
+        </select>
+    </div>
+    </form>
     <table class="tabela">
         
         <tr>
@@ -61,6 +98,38 @@
             </tr>
         {% endfor %}
     </table>
+    <br>
+    <form id="seletorForm" action="/seletor_linha" method="get">
+        <select class="select_linha" name="campo1" id="select_linha">
+            <option value="">Quero Combinar a linha :</option>
+            <option value="nome">Nome Completo do Utilizador</option>
+            <option value="grupos">Grupos</option>
+            <option value="email">Email</option>
+            <option value="datas">Datas</option>
+            <option value="questao1">Neste momento da disciplina, você já se sente capaz de encontrar o módulo de uma palavra?</option>
+            <option value="questao2">Neste momento da disciplina, você se sente capaz de diferenciar palavra de alfabeto?</option>
+            <option value="questao3">Neste momento da disciplina, você se sente capaz de identificar uma linguagem?</option>
+            <option value="questao4">Neste momento da disciplina, você se sente capaz de aplicar os operadores apresentados em um alfabeto?</option>
+        </select>
+        <br>
+        <br>
+        <div>
+            <select class="select_linha_2" name="campo2" id="select_linha_2">
+                <option value="">Com a linha :</option>
+                <option value="nome">Nome Completo do Utilizador</option>
+                <option value="grupos">Grupos</option>
+                <option value="email">Email</option>
+                <option value="datas">Datas</option>
+                <option value="questao1">Neste momento da disciplina, você já se sente capaz de encontrar o módulo de uma palavra?</option>
+                <option value="questao2">Neste momento da disciplina, você se sente capaz de diferenciar palavra de alfabeto?</option>
+                <option value="questao3">Neste momento da disciplina, você se sente capaz de identificar uma linguagem?</option>
+                <option value="questao4">Neste momento da disciplina, você se sente capaz de aplicar os operadores apresentados em um alfabeto?</option>
+            </select>
+        </div>
+        <br>
+        <br>
+        <button type="submit">Enviar</button>
+    </form> 
 
 </body>
 </html>
