@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Document</title>
+    <html data-theme="light"></html>
+</head>
+<body>
+    <div class="w3-bar w3-black w3-xlarge ">
+        <a href="index.html" class="w3-bar-item w3-button w3-mobile">Início</a>
+        <a href="#" class="w3-bar-item w3-button w3-mobile ">Adicionar Pessoa</a>
+        <a href="#" class="w3-bar-item w3-button w3-mobile w3-red">Listar Pessoas</a>
+        <a href="notícias.html" class="w3-bar-item w3-button w3-mobile w3-right">Notícias</a>
+        <a href="sobre.html" class="w3-bar-item w3-button w3-mobile w3-right">Sobre o Site</a>
+        <a href="contato.html" class="w3-bar-item w3-button w3-mobile w3-right">Contato</a>
+      </div> 
+      <h2><strong>Lista de Pessoas</strong></h2>
+      <table>
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Nome Completo</th>
+          <th scope="col">Email</th>
+          <th scope="col">Data de Nascimento</th>
+          <th scope="col">Gênero</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Remover</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>1</th>
+          <td>Vinicius Leonardo de Oliveira</td>
+          <td><a href="mailto:vinicius.oliveira99302@alunos.ufersa.edu.br">vinicius.oliveira99302@alunos.ufersa.edu.br</a></td>
+          <td>21/06/1998</td>
+          <td>Masculino</td>
+          <td><button class="editar-btn" onclick="window.location.href='editarPessoas.html'">
+            Editar
+          </button></td>
+          <td><button class="editar-btn" onclick="window.location.href='editarPessoas.html'">
+            Remover
+          </button></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Nome da Segunda Pessoa</td>
+          <td><a href="">segunda@segunda.com</a></td>
+          <td>10/10/2000</td>
+          <td>Feminino</td>
+          <td><button class="editar-btn" onclick="window.location.href='editarPessoas.html'">
+            Editar
+          </button></td>
+          <td><button class="editar-btn" onclick="window.location.href='editarPessoas.html'">
+            Remover
+          </button></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Nome da Terceira Pessoa</td>
+            <td><a href="">terceira@terceira.com</a></td>
+            <td>11/11/2011</td>
+            <td>Masculino</td>
+            <td><button class="editar-btn" onclick="window.location.href='editarPessoas.html'">
+              Editar
+            </button></td>
+            <td><button class="editar-btn" onclick="window.location.href='editarPessoas.html'">
+              Remover
+            </button></td>
+          </tr>
+        
+      </tbody>
+    </table>
+</body>
+</html>

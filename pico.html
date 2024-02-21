@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Adicionar Pessoas</title>
+    <html data-theme="light"></html>
+  </head>
+  <body>
+
+    <div class="w3-bar w3-black w3-xlarge ">
+      <a href="index.html" class="w3-bar-item w3-button w3-mobile">Início</a>
+      <a href="#" class="w3-bar-item w3-button w3-mobile w3-red">Adicionar Pessoa</a>
+      <a href="#" class="w3-bar-item w3-button w3-mobile">Listar Pessoas</a>
+      <a href="notícias.html" class="w3-bar-item w3-button w3-mobile w3-right">Notícias</a>
+      <a href="sobre.html" class="w3-bar-item w3-button w3-mobile w3-right">Sobre o Site</a>
+      <a href="contato.html" class="w3-bar-item w3-button w3-mobile w3-right">Contato</a>
+    </div>
+
+    <h1><strong>Formulário para adicionar pessoas :</strong></h1>  
+    <br>
+    <form>
+      <div class="grid"> 
+        <label for="seu-nome">
+          Seu Nome
+          <input type="text" id="seu-nome" name="firstname" placeholder="Nome Completo" required>
+        </label>
+    
+        <label for="Email">
+          Email
+          <input type="text" id="Email" name="lastname" placeholder="nome@dominio.com" required>
+        </label>
+
+        <label for="Data">
+          Data de Nascimento
+          <input type="date" id="Data" name="lastname" placeholder="Data de Nascimento" required>
+        </label>
+    
+      </div>
+    </form>
+
+    <br>
+
+    <fieldset>
+
+      <legend>Gênero*</legend>
+      <label for="masculino">
+        <input type="radio" id="masculino" name="masculino" value="small" checked>
+        Masculino
+      </label>
+      <label for="feminino">
+        <input type="radio" id="feminino" name="feminino" value="medium">
+        Feminino
+      </label>
+      <label for="não">
+        <input type="radio" id="não" name="não" value="large">
+        Não Informar
+      </label>
+    </fieldset>
+    <br>
+
+    <button type="button" onclick="window.location.href=''">Adicionar!</button>
+    <button type="submit" class="secondary">Limpar</button>
+    <br>
+    <h2><strong>Campo obrigatório*</strong></h2>
+  </body>
+
+  <style>
+    button {
+      width: 35%;
+      display: inline-block;
+      margin-right: 35px;
+      margin-left: 35px;
+    }
+  </style>
+    
+</html>

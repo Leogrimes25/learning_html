@@ -4,7 +4,7 @@
 
 h1{
     text-align: right;
-    color: rgb(19, 13, 2);
+    color: rgb(240, 238, 235);
     font-size: 45px;
    
 }
@@ -17,9 +17,10 @@ body{
     margin: 0px;
 }
 
-
-.paragrafo{
+main p{
     text-align: center;
+    font-size: large;
+    justify-content: center;
 }
 
 .navbar ul{
@@ -41,7 +42,7 @@ body{
 }
 
 .navbar a:hover{
-    background-color: rgb(110, 106, 106);
+    background-color: rgb(95, 92, 92);
 }
 
 .navbar li{
